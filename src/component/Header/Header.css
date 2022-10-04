@@ -1,0 +1,19 @@
+ .nav-right {
+   text-align: right;
+ }
+ 
+ ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+ }
+
+ ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
+ }
+
+ ul li:hover a {
+    color: blue;
+ }
