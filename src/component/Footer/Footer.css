@@ -1,0 +1,29 @@
+.bg-semi-blue {
+    background: #3C75BE;
+    padding: 30px;
+}
+.footer-social ul{
+    margin: 0;
+}
+
+.footer-social ul li a{
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    background-color: #fff;
+    transition: .3s;
+    border: none;
+    outline: none;
+}
+.footer-social ul li:hover a{
+    border-radius: 50%;
+}
+
+.footer-menu li a{
+    color: #fff;
+    transition: .3s;
+}
+
+.footer-menu li:hover a{
+    color: #000;
+}
