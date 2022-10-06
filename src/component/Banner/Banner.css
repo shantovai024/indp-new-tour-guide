@@ -5,6 +5,10 @@
     padding: 50px;
 }
 
+.banner-height {
+    height: 525px;
+}
+
 /* .banner-thumb {
     position: absolute;
     right: 0;
@@ -14,6 +18,16 @@
 /* .banner-text{
     align-items: center;
 } */
+
+.banner-text h2{
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.banner-text p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
 
 .banner-thumb img {
     width: 100%;

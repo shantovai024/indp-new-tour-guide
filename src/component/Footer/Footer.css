@@ -1,3 +1,14 @@
+.footer-menu{
+    padding: 0;
+}
+.footer-menu li:first-child{
+    margin: 0;
+}
+
+.footer-social ul{
+    padding-left: 0;
+}
+
 .bg-semi-blue {
     background: #3C75BE;
     padding: 30px;
@@ -26,4 +37,13 @@
 
 .footer-menu li:hover a{
     color: #000;
+}
+.footer-contact {
+    padding-left: 0;
+}
+
+.footer-contact li{
+    display: block;
+    color: #fff;
+    margin-left: 0;
 }

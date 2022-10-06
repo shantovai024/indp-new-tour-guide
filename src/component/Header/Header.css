@@ -8,10 +8,18 @@
     margin: 10px;
  }
 
+ ul.nav-right li:last-child{
+   margin-right: 0;
+ }
+
  ul li a {
     text-decoration: none;
     padding: 10px;
     color: #000;
+ }
+
+ ul.nav-right li a:last-child{
+   padding-right: 0;
  }
 
  ul li:hover a {
