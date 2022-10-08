@@ -1,0 +1,81 @@
+.login-wrapper {
+  width: 300px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-field label {
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: #3C75BE;
+}
+
+.input-field input {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  border: 1px solid rgb(100, 98, 98);
+}
+
+.google-icon {
+  width: 10%;
+
+}
+
+.google-btn-bg {
+  background: #4285F4;
+  color: #fff;
+  width: 100%;
+  padding: 3px;
+  font-size: 20px;
+}
+
+.google-auth-wrapper button {
+  text-decoration: none;
+  transition: .3s;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.google-auth-wrapper button:hover {
+  color: #fff;
+  background: #4286f4b4;
+}
+
+
+.logo-icon {
+  width: 20%;
+  background: #fff;
+}
+
+.logo-text {
+  text-decoration: none;
+  width: 80%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  width: 300px;
+  padding: 5px;
+  font-size: 20px;
+  background: #3C75BE;
+  color: #fff;
+  border: 1px solid rgb(100, 98, 98);
+  border-radius: 5px;
+  outline: none;
+}
+
+.sign-up-route {
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
