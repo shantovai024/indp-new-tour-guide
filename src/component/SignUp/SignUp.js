@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './SignUp.css'
 
 const SignUp = () => {
@@ -70,19 +70,14 @@ const SignUp = () => {
                 {errorElement}
 
                 <button disabled={!agree} className='submit-btn' type='submit'>Signup</button>
-                <div className="input-wrapper">
-                    <p className='text-center mt-3'>Or Login With</p>
-                    <div className="google-auth-wrapper ">
-                        <button className="google-btn-bg d-flex">
-                            <span className='logo-icon'> <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt='' /> </span>
-                            <span className='logo-text'> Google</span>
-                        </button>
-                    </div>
-                    <div className="sign-up-link mt-3">
-                        <p>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'>Login</span> Now</p>
-                    </div>
-                </div>
             </form>
+
+            <SocialLogin></SocialLogin>
+
+            <div className="sign-up-link mt-3">
+                <p>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'>Login</span> Here</p>
+            </div>
+
         </div>
     );
 };
