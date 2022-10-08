@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
 import {useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
@@ -7,6 +6,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 const Login = () => {
     const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
+
 
     let navigate = useNavigate()
 
@@ -31,7 +31,7 @@ const Login = () => {
     return (
         <div className='login-wrapper'>
             <h2>Login</h2>
-            <Form onSubmit={handleLogIn}>
+            <form onSubmit={handleLogIn}>
                 <div className="input-field">
                     <label htmlFor="email">Email</label>
                     <div className="input-wrapper">
@@ -58,7 +58,7 @@ const Login = () => {
                         <p>Don't have any account? <span onClick={loginToSignUp} className='sign-up-route text-primary'>Sign Up</span> Now</p>
                     </div>
                 </div>
-            </Form>
+            </form>
         </div>
     );
 };
