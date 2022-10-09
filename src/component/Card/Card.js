@@ -4,8 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const Card = ({ singleData }) => {
 
-    let navigate = useNavigate()
-    let location = useLocation()
+    let navigate = useNavigate();
+    let location = useLocation();
 
     let { id, name, image, description } = singleData;
 

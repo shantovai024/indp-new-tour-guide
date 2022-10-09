@@ -48,19 +48,19 @@ const SignUp = () => {
                 <div className="input-field">
                     <label htmlFor="name">Name</label>
                     <div className="input-wrapper">
-                        <input type="text" name="name" id="name" />
+                        <input type="text" name="name" id="name" required />
                     </div>
                 </div>
                 <div className="input-field">
                     <label htmlFor="email">Email</label>
                     <div className="input-wrapper">
-                        <input type="text" name="email" id="email" />
+                        <input type="text" name="email" id="email" required />
                     </div>
                 </div>
                 <div className="input-field">
                     <label htmlFor="password">Password</label>
                     <div className="input-wrapper">
-                        <input type="password" name="password" id="password" />
+                        <input type="password" name="password" id="password" required />
                     </div>
                 </div>
                 <input onClick={() => setAgree(!agree)} className='me-3' type="checkbox" name='terms' id='terms' />

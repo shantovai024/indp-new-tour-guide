@@ -47,13 +47,13 @@ const Login = () => {
                 <div className="input-field">
                     <label htmlFor="email">Email</label>
                     <div className="input-wrapper">
-                        <input ref={emailRef} type="email" name="email" id="email" />
+                        <input ref={emailRef} type="email" name="email" id="email" required/>
                     </div>
                 </div>
                 <div className="input-field">
                     <label htmlFor="password">Password</label>
                     <div className="input-wrapper">
-                        <input ref={passwordRef} type="password" name="password" id="password" />
+                        <input ref={passwordRef} type="password" name="password" id="password" required />
                     </div>
                 </div>
                 {errorElement}

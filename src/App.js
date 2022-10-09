@@ -10,6 +10,7 @@ import Login from './component/Login/Login';
 import Banner from './component/Banner/Banner';
 import Footer from './component/Footer/Footer';
 import SignUp from './component/SignUp/SignUp';
+import Error404Page from './component/Error404Page/Error404Page';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<Error404Page></Error404Page>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
