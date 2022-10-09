@@ -8,7 +8,6 @@ const WhyChoose = () => {
     return (
         <div className='text-center'>
             <h2 className='mb-5'><span className='text-primary'>Why Choose</span> Me?</h2>
-            <p></p>
             <div className="row text-center">
                 {
                     chooseData.map((singleChoose) => <ChooseCard

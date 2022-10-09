@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useLoadData = () => {
     let [data, setData] = useState([])
-    
+
     useEffect(() => {
-             fetch('data.json')
+        fetch('data.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
