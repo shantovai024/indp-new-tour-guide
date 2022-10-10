@@ -25,10 +25,15 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || '/'
 
+    if (location.state?.from) {
+        navigate(location.state.from)
+    }
+
     if (user) {
         navigate(from, { replace: true })
     }
 
+ 
     let handleLogIn = (event) => {
         event.preventDefault()
         let email = emailRef.current.value;
@@ -47,7 +52,7 @@ const Login = () => {
                 <div className="input-field">
                     <label htmlFor="email">Email</label>
                     <div className="input-wrapper">
-                        <input ref={emailRef} type="email" name="email" id="email" required/>
+                        <input ref={emailRef} type="email" name="email" id="email" required />
                     </div>
                 </div>
                 <div className="input-field">
@@ -64,7 +69,7 @@ const Login = () => {
             <div className="sign-up-link mt-3">
                 <p>Don't have any account? <span onClick={loginToSignUp} className='sign-up-route text-primary'>Sign Up</span> Now</p>
             </div>
-            
+
         </div>
     );
 };

@@ -7,3 +7,15 @@
 .single-card img {
     width: 100%;
 }
+
+.checkout-btn {
+    padding: 10px 7px;
+    border: none;
+    background-color: #0d6dfdc7;
+    color: #fff;
+    transition: .3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0D6EFD;
+}

@@ -13,6 +13,8 @@ import SignUp from './component/SignUp/SignUp';
 import Error404Page from './component/Error404Page/Error404Page';
 import Hotels from './component/Hotels/Hotels';
 import Foods from './component/Foods/Foods';
+import CheckOut from './component/CheckOut/CheckOut';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -27,7 +29,12 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/hotels' element={<Hotels></Hotels>}></Route>
+        <Route path='/checkout' element={<PrivateRoute>
+          <CheckOut></CheckOut>
+        </PrivateRoute>}>
+        </Route>
         <Route path='/foods' element={<Foods></Foods>}></Route>
+
         <Route path='*' element={<Error404Page></Error404Page>}></Route>
       </Routes>
       <Footer></Footer>

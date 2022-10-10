@@ -1,4 +1,5 @@
 import React from 'react';
+import './WhyChoose.css'
 import ChooseCard from '../ChooseCard/ChooseCard';
 import useServiceData from '../hooks/useServiceData';
 
@@ -7,7 +8,7 @@ const WhyChoose = () => {
 
     return (
         <div className='text-center'>
-            <h2 className='mb-5'><span className='text-primary'>Why Choose</span> Me?</h2>
+            <h1 className='mb-5'><span className='text-primary'>Why Choose</span> Me?</h1>
             <div className="row text-center">
                 {
                     chooseData.map((singleChoose) => <ChooseCard

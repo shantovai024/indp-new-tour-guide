@@ -1,0 +1,17 @@
+.bg-gray {
+    background: #ddd;
+}
+
+.bg-checkout {
+    background: #2E3138
+}
+
+.checkout-form {
+    padding: 40px;
+    background: #c3c6cd;
+    border-radius: 20px;
+}
+
+.checkout-form label {
+    color: #000;
+}

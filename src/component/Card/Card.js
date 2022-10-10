@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Card.css'
 
 const Card = ({ singleData }) => {
+    let navigate = useNavigate();
 
     let { name, image, description } = singleData;
 
@@ -13,7 +15,9 @@ const Card = ({ singleData }) => {
                     <h3 className="card-title">{name}</h3>
                     <p className="card-text">{description}</p>
                 </div>
+                <button onClick={()=> navigate('/checkout')} className='checkout-btn'>Check Out</button>
             </div>
+            
         </div>
     );
 };
