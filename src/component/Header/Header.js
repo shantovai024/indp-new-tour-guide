@@ -2,8 +2,17 @@ import React from 'react';
 import './Header.css'
 import logo from '../../images/ahmed-tourism.png'
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    let [user] = useAuthState(auth)
+
+    let handleSignOut = () => {
+        signOut(auth)
+    }
+
     return (
         <div>
             <div className="row">
@@ -18,7 +27,9 @@ const Header = () => {
                             <li><Link to={'/blog'}>Blog</Link></li>
                             <li><Link to={'/hotels'}>Hotel</Link></li>
                             <li><Link to={'/foods'}>Foods</Link></li>
-                            <li><Link to={'/login'}>Login</Link></li>
+                            <li>{ user? <button onClick={handleSignOut}>Sign Out </button>:
+                                <Link to={'/login'}>Login</Link>
+                                }</li>
                         </ul>
                     </nav>
                 </div>
