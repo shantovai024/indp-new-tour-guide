@@ -16,10 +16,6 @@ const Hotels = () => {
                         singleBedData={singleBedData}
                     ></SingleBed>)
                 }
-
-            </div>
-            <div>
-                
             </div>
         </div>
     );

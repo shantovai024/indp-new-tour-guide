@@ -1,27 +1,45 @@
+ /* ----------------- Navigation Menu Css ----------------- */
+
  .nav-right {
    text-align: right;
  }
- 
+
  ul li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 10px;
+   list-style-type: none;
+   display: inline-block;
+   margin: 10px;
  }
 
- ul.nav-right li:last-child{
+ ul.nav-right li:last-child {
    margin-right: 0;
  }
 
  ul li a {
-    text-decoration: none;
-    padding: 10px;
-    color: #000;
+   text-decoration: none;
+   padding: 10px;
+   color: #000;
  }
 
- ul.nav-right li a:last-child{
+ ul.nav-right li a:last-child {
    padding-right: 0;
  }
 
  ul li:hover a {
-    color: blue;
+   color: blue;
+ }
+
+ /* ----------------- Responsive ----------------- */
+
+ @media (max-width: 767px) {
+
+   .header-logo,
+   .header-menu {
+     text-align: center;
+   }
+
+   .nav-right {
+     padding-left: 0;
+     text-align: center;
+   }
+
  }

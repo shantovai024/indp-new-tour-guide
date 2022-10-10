@@ -17,9 +17,7 @@ const Destination = () => {
                         ></Card>)}
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 };

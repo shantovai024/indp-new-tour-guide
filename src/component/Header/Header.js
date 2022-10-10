@@ -8,7 +8,7 @@ import { signOut } from 'firebase/auth';
 
 const Header = () => {
     let [user] = useAuthState(auth)
-
+    
     let handleSignOut = () => {
         signOut(auth)
     }
@@ -16,20 +16,20 @@ const Header = () => {
     return (
         <div>
             <div className="row">
-                <div className="col-xl-3">
+                <div className="col-md-3 col-sm-12 header-logo">
                     <img src={logo} alt="" />
                 </div>
-                <div className="col-xl-9">
+                <div className="col-md-9 col-sm-12">
                     <nav>
-                        <ul className='nav-right'>
+                        <ul className='nav-right header-menu'>
                             <li><Link to={'/'}>Home</Link></li>
                             <li><Link to={'/about'}>About</Link></li>
                             <li><Link to={'/blog'}>Blog</Link></li>
                             <li><Link to={'/hotels'}>Hotel</Link></li>
                             <li><Link to={'/foods'}>Foods</Link></li>
-                            <li>{ user? <button onClick={handleSignOut}>Sign Out </button>:
+                            <li>{user ? <button onClick={handleSignOut}>Sign Out </button> :
                                 <Link to={'/login'}>Login</Link>
-                                }</li>
+                            }</li>
                         </ul>
                     </nav>
                 </div>

@@ -12,7 +12,6 @@ const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
     let signUpToLogin = () => {
@@ -33,12 +32,6 @@ const SignUp = () => {
 
     if (user) {
         navigate('/')
-    }
-
-    let errorElement;
-    if (error) {
-        errorElement = <p className='text-danger'> {error?.message}</p>
-        console.log(error.message);
     }
 
     return (
@@ -68,13 +61,9 @@ const SignUp = () => {
 
                     <label className={`${agree ? 'text-primary' : 'text-danger'}`} htmlFor='terms'>Accept the Terms & Condition</label> <br />
 
-                    {errorElement}
-
                     <button disabled={!agree} className='submit-btn' type='submit'>Signup</button>
                 </form>
-
                 <SocialLogin></SocialLogin>
-
                 <div className="sign-up-link mt-3">
                     <p>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'>Login</span> Here</p>
                 </div>

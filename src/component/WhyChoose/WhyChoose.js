@@ -12,9 +12,8 @@ const WhyChoose = () => {
             <div className="row text-center">
                 {
                     chooseData.map((singleChoose) => <ChooseCard
-                    key= {singleChoose.id}
-                    singleChoose = {singleChoose}
-                    >
+                        key={singleChoose.id}
+                        singleChoose={singleChoose}>
                     </ChooseCard>)
                 }
             </div>

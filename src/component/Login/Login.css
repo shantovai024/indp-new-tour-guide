@@ -9,7 +9,7 @@
   border-radius: 20PX;
 }
 
-.login h2{
+.login h2 {
   text-align: center;
 }
 
@@ -47,7 +47,7 @@
 .google-btn-bg {
   background: #4285F4;
   color: #fff;
-  width:500px;
+  width: 500px;
   padding: 3px;
   font-size: 20px;
 }
@@ -64,7 +64,6 @@
   color: #fff;
   background: #4286f4b4;
 }
-
 
 .logo-icon {
   width: 20%;
@@ -94,4 +93,36 @@
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* ----------------- Responsive (Medium Device )----------------- */
+
+@media (max-width: 768px) {
+
+  .login {
+    width: 400px;
+  }
+
+  .input-field input {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .google-btn-bg {
+    width: 100%;
+  }
+
+}
+
+/* ----------------- Small Device ----------------- */
+
+@media (max-width: 575px) {
+
+  .login {
+    width: 400px;
+  }
+
 }

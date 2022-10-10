@@ -9,22 +9,12 @@
     height: 525px;
 }
 
-/* .banner-thumb {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-} */
-
-/* .banner-text{
-    align-items: center;
-} */
-
-.banner-text h2{
+.banner-text h2 {
     font-size: 45px;
     margin-bottom: 40px;
 }
 
-.banner-text p{
+.banner-text p {
     font-size: 20px;
     margin-bottom: 40px;
 }
@@ -42,7 +32,7 @@
     border-radius: 5px;
 }
 
-.btn-1:hover{
+.btn-1:hover {
     background: none;
     border: 1px solid #4286f4;
     color: #000;
@@ -57,4 +47,48 @@
 .btn-2:hover {
     background-image: linear-gradient(#373B44, #4286f4);
     color: #fff !important;
+}
+
+/* All Responsive File Tested on Bootstrap Grid */
+
+/* ----------------- Banner (Large device) ----------------- */
+@media (max-width: 992px) {
+
+    .banner-wrapper {
+        padding: 20px;
+    }
+
+    .banner-thumb {
+        margin-top: 80px;
+    }
+
+    .banner-text h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .banner-text p {
+        margin-bottom: 10px;
+    }
+
+}
+
+/* ----------------- Banner (Medium device) ----------------- */
+@media (max-width: 767px) {
+
+    .banner-height {
+        height: 500px;
+    }
+
+    .banner-thumb {
+        display: none;
+    }
+
+    .banner-wrapper {
+        min-height: 500px;
+    }
+
+    .banner-text p {
+        margin-bottom: 30px;
+    }
 }

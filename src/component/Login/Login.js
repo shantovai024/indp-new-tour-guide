@@ -10,13 +10,7 @@ const Login = () => {
     const [
         signInWithEmailAndPassword,
         user,
-        error,
     ] = useSignInWithEmailAndPassword(auth);
-
-    let errorElement;
-    if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
-    }
 
     let emailRef = useRef('');
     let passwordRef = useRef('');
@@ -32,7 +26,6 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true })
     }
-
 
     let handleLogIn = (event) => {
         event.preventDefault()
@@ -62,10 +55,8 @@ const Login = () => {
                             <input ref={passwordRef} type="password" name="password" id="password" required />
                         </div>
                     </div>
-                    {errorElement}
                     <button className='submit-btn' type='submit'>Login</button>
                 </form>
-
                 <SocialLogin></SocialLogin>
                 <div className="sign-up-link mt-3">
                     <p>Don't have any account? <span onClick={loginToSignUp} className='sign-up-route text-primary'>Sign Up</span> Now</p>

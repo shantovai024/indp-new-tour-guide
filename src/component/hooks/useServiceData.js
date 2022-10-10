@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 const useServiceData = () => {
     let [chooseData, setchooseData] = useState([])
-    
+
     useEffect(() => {
-             fetch('chooseData.json')
+        fetch('chooseData.json')
             .then(res => res.json())
             .then(data => setchooseData(data))
     }, [])
