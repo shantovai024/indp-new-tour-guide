@@ -12,6 +12,7 @@ const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
         user,
+        error
     ] = useCreateUserWithEmailAndPassword(auth);
 
     let signUpToLogin = () => {
@@ -32,6 +33,11 @@ const SignUp = () => {
 
     if (user) {
         navigate('/')
+    }
+
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger text-center'>Error: {error?.message}</p>
     }
 
     return (
@@ -63,6 +69,7 @@ const SignUp = () => {
 
                     <button disabled={!agree} className='submit-btn' type='submit'>Signup</button>
                 </form>
+                {errorElement}
                 <SocialLogin></SocialLogin>
                 <div className="sign-up-link mt-3">
                     <p>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'>Login</span> Here</p>
