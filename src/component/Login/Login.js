@@ -33,7 +33,7 @@ const Login = () => {
         navigate(from, { replace: true })
     }
 
- 
+
     let handleLogIn = (event) => {
         event.preventDefault()
         let email = emailRef.current.value;
@@ -46,30 +46,31 @@ const Login = () => {
     }
 
     return (
-        <div className='login-wrapper'>
-            <h2>Login</h2>
-            <form onSubmit={handleLogIn}>
-                <div className="input-field">
-                    <label htmlFor="email">Email</label>
-                    <div className="input-wrapper">
-                        <input ref={emailRef} type="email" name="email" id="email" required />
+        <div className='login-wrapper '>
+            <div className="login">
+                <h2>Login</h2>
+                <form onSubmit={handleLogIn}>
+                    <div className="input-field">
+                        <label htmlFor="email">Email</label>
+                        <div className="input-wrapper">
+                            <input ref={emailRef} type="email" name="email" id="email" required />
+                        </div>
                     </div>
-                </div>
-                <div className="input-field">
-                    <label htmlFor="password">Password</label>
-                    <div className="input-wrapper">
-                        <input ref={passwordRef} type="password" name="password" id="password" required />
+                    <div className="input-field">
+                        <label htmlFor="password">Password</label>
+                        <div className="input-wrapper">
+                            <input ref={passwordRef} type="password" name="password" id="password" required />
+                        </div>
                     </div>
-                </div>
-                {errorElement}
-                <button className='submit-btn' type='submit'>Login</button>
-            </form>
+                    {errorElement}
+                    <button className='submit-btn' type='submit'>Login</button>
+                </form>
 
-            <SocialLogin></SocialLogin>
-            <div className="sign-up-link mt-3">
-                <p>Don't have any account? <span onClick={loginToSignUp} className='sign-up-route text-primary'>Sign Up</span> Now</p>
+                <SocialLogin></SocialLogin>
+                <div className="sign-up-link mt-3">
+                    <p>Don't have any account? <span onClick={loginToSignUp} className='sign-up-route text-primary'>Sign Up</span> Now</p>
+                </div>
             </div>
-
         </div>
     );
 };

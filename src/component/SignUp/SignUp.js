@@ -43,41 +43,42 @@ const SignUp = () => {
 
     return (
         <div className='login-wrapper'>
-            <h2>Sign Up</h2>
-            <form onSubmit={handleRegister}>
-                <div className="input-field">
-                    <label htmlFor="name">Name</label>
-                    <div className="input-wrapper">
-                        <input type="text" name="name" id="name" required />
+            <div className="login">
+                <h2>Sign Up</h2>
+                <form onSubmit={handleRegister}>
+                    <div className="input-field">
+                        <label htmlFor="name">Name</label>
+                        <div className="input-wrapper">
+                            <input type="text" name="name" id="name" required />
+                        </div>
                     </div>
-                </div>
-                <div className="input-field">
-                    <label htmlFor="email">Email</label>
-                    <div className="input-wrapper">
-                        <input type="text" name="email" id="email" required />
+                    <div className="input-field">
+                        <label htmlFor="email">Email</label>
+                        <div className="input-wrapper">
+                            <input type="text" name="email" id="email" required />
+                        </div>
                     </div>
-                </div>
-                <div className="input-field">
-                    <label htmlFor="password">Password</label>
-                    <div className="input-wrapper">
-                        <input type="password" name="password" id="password" required />
+                    <div className="input-field">
+                        <label htmlFor="password">Password</label>
+                        <div className="input-wrapper">
+                            <input type="password" name="password" id="password" required />
+                        </div>
                     </div>
+                    <input onClick={() => setAgree(!agree)} className='me-3' type="checkbox" name='terms' id='terms' />
+
+                    <label className={`${agree ? 'text-primary' : 'text-danger'}`} htmlFor='terms'>Accept the Terms & Condition</label> <br />
+
+                    {errorElement}
+
+                    <button disabled={!agree} className='submit-btn' type='submit'>Signup</button>
+                </form>
+
+                <SocialLogin></SocialLogin>
+
+                <div className="sign-up-link mt-3">
+                    <p>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'>Login</span> Here</p>
                 </div>
-                <input onClick={() => setAgree(!agree)} className='me-3' type="checkbox" name='terms' id='terms' />
-
-                <label className={`${agree ? 'text-primary' : 'text-danger'}`} htmlFor='terms'>Accept the Terms & Condition</label>
-
-                {errorElement}
-
-                <button disabled={!agree} className='submit-btn' type='submit'>Signup</button>
-            </form>
-
-            <SocialLogin></SocialLogin>
-
-            <div className="sign-up-link mt-3">
-                <p>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'>Login</span> Here</p>
             </div>
-
         </div>
     );
 };
